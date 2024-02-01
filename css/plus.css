@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+  #navbar {
+    background-color: rgb(2 132 199);
+    transition: 500ms;
+    transition-timing-function: ease-in;
+    padding: 0.8rem;
+  }
+}

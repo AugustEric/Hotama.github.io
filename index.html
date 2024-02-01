@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/plus.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body style="background-image: url(asset/Backgr\ \(2\).jpg); height: 100vh;" class="bg-cover bg-center h-64 md:h-80 lg:h-96 float-left">
+  <nav class="p-5 bg-transparent fixed w-full shadow md:flex md:items-center md:justify-between z-10" id="navbar">
+    <div class="flex justify-between items-center">
+    <span class="text-3xl font-[Poppins] cursor-pointer">
+      <img class="h-10 inline" src="asset/A__2_-removebg-preview.png"" alt=""><font class="text-amber-400">Mug</font><font class="text-pink-400">Ways</font>
+    </span>
+
+    <span class="text-3xl cursor-pointer mx-2 md:hidden block text-white" >
+      <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+    </span>
+
+  </div>
+
+  <!--Navbar  -->
+<ul class="md:flex md:items-center items-center justify-center z-[-1] md:z-auto md:static w-full absolute bg-transparent left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+  <li class="mx-3 my-6 md:my-0 ">
+    <a href="" class="text-xl text-white hover:text-cyan-500 duration-500">Home</a>
+  </li>
+  <li class="mx-3 my-6 md:my-0">
+    <a href="" class="text-xl text-white hover:text-cyan-500 duration-500">About</a>
+  </li>
+  <li class="mx-3 my-6 md:my-0">
+    <a href="" class="text-xl text-white hover:text-cyan-500 duration-500">Services</a>
+  </li>
+  <li class="mx-3 my-6 md:my-0">
+    <a href="" class="text-xl text-white hover:text-cyan-500 duration-500">Contact</a>
+  </li>
+  <li class="mx-3 my-6 md:my-0">
+    <a href="" class="text-xl text-white hover:text-cyan-500 duration-500">More</a>
+  </li>
+  <button class="bg-cyan-500 text-white font-[Poppins] duration-500 px-4 rounded-md py-2 mx-4 hover:bg-cyan">
+    Get Started
+  </button>
+</ul>
+  </nav>
+
+  <!-- Welcome Text -->
+  <section id="new-section" name="Portfolio" class="float-left">
+    <div class="absolute inset-0 w-full bg-black opacity-50"></div>
+    <div class="container">
+      <div class="z-10">
+        <div class="relative p-9 text-white">
+          <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;" class="mt-40 text-7xl">Eat . Drink.</h1>
+          <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" class="text-5xl">Relax . Fun.</h1>
+          <h5>Spend time in a cozy area.</h5>
+          <h5>Create a moments with family or friends.</h5>
+          <h5>Creating unforgettable memories in <font class="text-pink-400">Mug</font> <font class="text-amber-400">Ways!</font></h5>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+<!-- SEBENARNYA BELUM JADI BANG TERUTAMA PADA BAGIAN NAVBAR SAAT MODE UKURAN LAYAR KECIL, TAPI KASIHAN TEMEN SAYA PADA MAU NGUMPULIN SEMUA, JADI SEADANYA, TAPI TETAP NANTI DIRUMAH SAYA LANJUT PERBAIKI LAGI -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+  </script>
+  <script>
+  function Menu(e){
+    let list = document.querySelector('ul');
+
+    e.name === 'menu' ? (e.name = "close",list.classList.add('top-[50px]') , list.classList.add('opacity-100') , list.classList.add('bg-sky-600')) 
+     : (e.name = "menu",list.classList.remove('top-[50px]'),list.classList.remove('opacity-100') , list.classList.remove('bg-sky-600')) 
+  }
+  </script>
+</body>
+</html>

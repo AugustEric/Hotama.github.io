@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tes.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2" defer></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    * {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    </style>
+     <script>
+      document.addEventListener("scroll", () => {
+          
+          const nav = document.querySelector("nav");
+
+          if (window.scrollY > 200) {
+              nav.classList.add("backdrop-filter", "backdrop-blur-sm", "bg-opacity-20");
+          } else {
+              nav.classList.remove("backdrop-filter", "backdrop-blur-sm", "bg-opacity-20");
+          }
+      });
+  </script>
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'green-custom': '#10957D',
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <!-- bagian bagus -->
+    <header id="2">
+        <nav class="p-5 bg-transparent md:flex md:items-center md:justify-between w-full z-10 fixed transition-all ease-in-out duration-100 " id="navbar" x-data="{ navOpen: false }">
+            <div class="flex justify-between items-center">
+                
+            <span class="text-3xl cursor-pointer">
+              <img class="h-6 absolute px-2 md:px-7" src="asset/image 1.svg" alt="" id="logo"><img class="px-12 md:px-16 mt-1 relative" src="asset/image 2.png" alt="" id="hotama">
+            </span>
+        
+            <div class="lg:hidden md:hidden">
+                <button @click="navOpen = !navOpen" class="text-black  focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div x-show="navOpen" class="md:hidden  fixed top-0 right-0 w-64 h-screen transform translate-x-0 transition-transform ease-in-out duration-300 bg-teal-500"
+   
+    x-transition:enter="transition-transform ease-out duration-300"
+    x-transition:enter-start="translate-x-full"
+    x-transition:enter-end="translate-x-0"
+    x-transition:leave="transition-transform ease-in duration-300"
+    x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="translate-x-full">
+                <div class="flex justify-end p-4 md:hidden">
+                    <button @click="navOpen = !navOpen" class="text-white hover:text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a href="#home" class="block text-white text-lg py-2 hover:text-gray-300" x-on:click="navOpen = !navOpen">About</a>
+                    <a href="#about" class="block text-white text-lg py-2 hover:text-gray-300" x-on:click="navOpen = !navOpen">Works</a>
+                    <a href="#" class="block text-white text-lg py-2 hover:text-gray-300" x-on:click="navOpen = !navOpen">Services</a>
+                    <a href="#" class="block text-white text-lg py-2 hover:text-gray-300" x-on:click="navOpen = !navOpen">Testimonial</a>
+                    <button class="border-2 border-white text-white p-2 w-36 py-2 rounded-lg">Contact Us</button>
+                   
+                   
+                </div>
+            </div>
+        
+          </div>
+          
+        
+          <!-- ISIAN NAVBAR -->
+          <div  id="sidebar">
+          <ul class="md:flex-row md:gap-5 items-center justify-center z-[-1] md:static w-full absolute bg-transparent left-0 md:w-auto
+           md:py-0 py-10 md:pl-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 
+           lg:mx-10 lg:gap-10 flex text-center md:mr-0 flex-col text-white md:text-black" id="ul">
+          <li class=" md:my-0 ">
+            <a href="#about" class="block text-lg py-2 hover:text-gray-300" x-on:click="navOpen = !navOpen">About</a>
+          </li>
+          <li class="mt-10 md:my-0">
+            <a href="" class="text-xl  hover:text-cyan-500 duration-500">Works</a>
+          </li>
+          <li class="mt-10 md:my-0">
+            <a href="" class="text-xl  hover:text-cyan-500 duration-500">Services</a>
+          </li>
+          <li class="mt-10 md:my-0 mb-10">
+            <a href="" class="text-xl  hover:text-cyan-500 duration-500">Testimonial</a>
+          </li>
+          <button class=" text-white md:text-teal-600 duration-500 px-4 rounded-md py-2 w-32 lg:w-36 border-2 font-medium border-teal-600">
+            Contact Us
+          </button>
+        </ul>
+      </div>
+          </nav>
+    </header>
+<!-- bagian bagus -->
+
+<section id="home" class="h-screen">
+ <div class="container flex flex-col items-center gap-10">
+    <div class="mx-auto">
+            <img src="asset/Orang 1.svg" alt="" class="absolute top-44 right-10 hidden xl:block md:w-[550px] md:right-[80px] transition-all ease-in duration-500">
+            </div>
+            <img src="asset/teal circle.svg" class="-z-50 absolute  right-0 -top-10 hidden lg:block transition-all ease-in duration-500">
+            <!-- logggiiicc -->
+            <img src="asset/teal circle kecil.svg" class="-z-50 absolute w-52 h-52 right-0 lg:hidden transition-all ease-in duration-500">
+            <!-- Yellow Circle-->
+            <img src="asset/yellow circle (1).svg" class="absolute top-44 right-72 sm:top-44 sm:right-[550px] md:right-[680px] md:top-[210px] xl:right-[590px] xl:top-[330px] 
+            lg:right-[900px] lg:top-[200px] -z-50 transition-all ease-in duration-500">
+            <!-- Green Circle -->
+            <img src="asset/light green circle.svg" class="absolute md:right-[100px] lg:top-[600px] top-[420px] lg:right-10 xl:block right-2 -z-50 transition-all ease-in duration-500">
+
+            <!-- top-52 left-12 -->
+            <!-- lg:top-80 top-40 lg:left-[800px] left-[80px] -->
+            </div>
+            <div class="text-center pt-64 xl:text-left xl:px-24 md:text-xl">
+        <h1 class="md:text-5xl font-bold md:inline-block text-4xl inline-block mx-5 md:mx-0">Your Trusty IT</h1>
+          <h1 class="md:text-5xl font-bold inline-block md:inline-block xl:hidden text-4xl">Consultant</h1>
+          <h1 class="md:text-5xl font-bold hidden xl:block lg:hidden text-4xl">Consultant With</h1>
+            <h1 class="md:text-5xl font-bold xl:hidden text-4xl mx-5 lg:mx-0">With<span class="text-teal-600 md:text-5xl font-bold text-4xl "> Years of Experience</span></h1>
+              <span class="text-teal-600 md:text-5xl font-bold hidden xl:block text-4xl xl:mb-5"> Years of Experience</span>
+    <div></div>
+  
+    <p class="font-normal md:text-lg pt-5 xl:inline xl:mt-10 ">Helping your business through </p>
+      <p class="font-normal md:text-lg xl:inline xl:mt-10">digital solution and best services</p>
+
+     <a href="#" class="inline-block text-lg py-3 px-8 capitalize text-center cursor-pointer rounded-xl ease-linear duration-200 text-white bg-teal-600 w-44 hover:bg-teal-700 mt-5 xl:block">Let's See</a>
+    </div>
+</div>
+</section>
+
+
+
+  
+
+ 
+
+</body>
+</html>
